@@ -27,7 +27,7 @@ export const programsData = [
         slug: "ai",
         header: "Artificial Intelligence (AI) and Deep Learning Specialization",
         description: "The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
-        imageSrc: "/ai.png",
+        imageSrc: "/AI.png",
         quarters: [
             {
                 header: "Quarter IV",
