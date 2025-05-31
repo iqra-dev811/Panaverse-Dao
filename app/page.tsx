@@ -5,7 +5,7 @@ import ProgramOutcome from "./components/vigits/ProgramOutcome";
 
 export default function Home() {
   return (
-    <div>
+    <div className="px-20">
        <Hero/>
        <CoreTrack/>
        <SpecializedTracker/>

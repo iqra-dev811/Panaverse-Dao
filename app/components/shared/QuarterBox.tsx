@@ -4,22 +4,17 @@ interface IProps {
   header: string;
   description: string;
   number: number;
-  haveBorder?: boolean;
+  haveBorder?:boolean;
 }
 
-const QuarterBox: FC<IProps> = ({ header, description, number, haveBorder = true }) => {
+const QuarterBox: FC<IProps> = ({ header, description, number, haveBorder =true }) => {
   return (
-    <div>
-      <div
-        className={`w-64 h-64 bg-white shadow-md ${
-          haveBorder ? 'border border-gray-300' : ''
-        } rounded-xl flex flex-col justify-center items-center text-center p-4`}
-      >
-        <h3 className="text-lg font-bold text-gray-800 mb-2">{header}</h3>
-        <p className="text-gray-600 text-sm whitespace-pre-line">{description}</p>
-        <span className="text-sm text-gray-500 mt-2">Quarter: {number}</span>
+      <div className="border rounded-md  w-4/12 relative flex-1 flex flex-col justify-center px-8 py-12">
+        <h4 className="font-bold text-lg">{header}</h4>
+        <p className="mt-2 text-slate-600 z-0">{description}</p>
+        <div className="absolute -top-8 right-10 text-[170px] text-gray-200 font-bold -z-10">{number}</div>
       </div>
-    </div>
+
   );
 };
 

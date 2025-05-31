@@ -1,55 +1,60 @@
 'use client';
 import React from 'react';
 import Wrapper from '../../components/shared/Wrapper';
-import QuarterBox from '../shared/QuarterBox';
+import Button from '../../components/shared/Button';
+import QuarterBox from '../../components/shared/QuarterBox';
 
-const quarterData = [
+const CoreTrackData = [
   {
-    title: 'Quarter I',
-    description: 'CS-101: Object-oriented programming using TypeScript.'
+    header: "Quarter I",
+    description: "CS-101: Object-Oriented Programming using TypeScript",
+    number: 1
   },
   {
-    title: 'Quarter II',
-    description: 'Success is not final, failure is not fatal.\nSuccess is not final, failure is not fatal.'
+    header: "Quarter II",
+    description: "W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform",
+    number: 2
   },
   {
-    title: 'Quarter III',
-    description: 'Every day is a new chance\nto grow and shine.'
-  }
+    header: "Quarter III",
+    description: "$-101: Dollar Making Bootcamp - Full-Stack Template and API Product Development",
+    number: 3
+  },
 ];
 
-export default function CoreTrack() {
+const CoreTrack = () => {
+  const paragraph = "Core Courses \n(Common in all Specializations)";
+  
   return (
-    <section>
+    <section className='mt-16 lg:mt-28'>
       <Wrapper>
-        <div className=" py-10 flex items-start justify-start px-10 bg-gray-50">
-          <div className="max-w-md">
-            <h4 className="text-teal-700 font-semibold text-lg mt-4">Program in studies</h4>
-            <h2 className="text-3xl font-bold text-gray-800 mb-0">Core Courses</h2>
-            <h2 className="text-3xl font-bold text-gray-800 mt-0">(Common in all Specialization)</h2>
-            <p className="text-base text-gray-800 mb-4 leading-relaxed">
-              Ye aik chhoti si paragraph hai jo teen lines mein likhi gayi hai.
-              Iska maksad sirf design aur alignment ko test karna hai.
-              Hum isay Tailwind CSS aur TypeScript ke zariye Next.js mein bana rahe hain.
-            </p>
-            <button className="px-4 py-2 bg-teal-600 text-white rounded-xl hover:bg-teal-700 transition">
-              Learn More
-            </button>
+        {/* Content Section */}
+        <div className="max-w-screen-md">
+          <h4 className="text-teal-700 font-semibold text-lg mt-4">Program in Studies</h4>
+          <h2 className="text-4xl font-semibold whitespace-pre-line">{paragraph}</h2>
+          <p className="mt-3 text-xl text-slate-600">
+            Every participant of the program will start by completing the following three core courses.
+          </p>
+          <div className='mt-4'>
+            <Button text="Learn More" />
           </div>
         </div>
 
-        {/* Quarter Boxes using map */}
-        <div className="flex flex-col md:flex-row justify-between items-center px-10 py-6 max-w-7xl mx-auto gap-6">
-          {quarterData.map((item, index) => (
-            <QuarterBox
-              key={index}
-              header={item.title}
+        {/* Boxes Section */}
+        <div className='my-20 flex flex-col md:flex-row gap-x-4 gap-y-8 ${haveBorder && "border"}'>
+          {CoreTrackData.map((item, i) => (
+            <QuarterBox 
+            key={i}
+             header={item.header}
               description={item.description}
-              number={index + 1}
+              number={i + 1}
+              haveBorder={false}
             />
           ))}
         </div>
       </Wrapper>
     </section>
   );
-}
+};
+
+export default CoreTrack;

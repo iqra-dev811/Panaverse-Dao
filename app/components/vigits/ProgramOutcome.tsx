@@ -1,7 +1,7 @@
 import React from 'react';
 import Wrapper from '../shared/Wrapper';
 import Image from 'next/image';
-import { PiSealCheckFill } from "react-icons/pi";
+import { CiSquareCheck } from "react-icons/ci";
 
 const outcomePoints = [
   "Product Ownership",
@@ -12,40 +12,37 @@ const outcomePoints = [
 
 export default function ProgramOutcome() {
   return (
-    <section className="text-gray-600 body-font">
+    <section className="mt-16 md:mt-20">
       <Wrapper>
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          
+        <div className="flex gap-x-8 items-center flex-col-reverse md:flex-row">
           {/* Left image */}
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+          <div className="flex-1 bg-white">
             <Image
-              src="/out.png"
+              src="/girl.png"
               alt="hero"
-              width={500}
-              height={700}
+              width={400}
+              height={500}
               className="object-cover object-center rounded"
             />
           </div>
 
           {/* Right content */}
-          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-              The Outcome for Participants of the Program
-            </h1>
-            <p className="mb-8 leading-relaxed">
+          <div className="flex-1">
+            <h1 className="font-bold text-4xl">The Outcome for Participants of the Program</h1>
+            <p className="mt-8 text-slate-600 text-lg">
               Chillwave portland ugh, knausgaard fam polaroid iPhone. Man braid swag
               typewriter affogato, hella selvage wolf narwhal dreamcatcher. Chillwave portland ugh,
               knausgaard fam polaroid iPhone. Man braid swag typewriter affogato.
             </p>
 
             {/* Outcome Points */}
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+            <div className=" mt-8 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-2 gap-y-4">
               {outcomePoints.map((item, i) => (
                 <div key={i} className="flex items-start space-x-2">
-                  <PiSealCheckFill size={20} color="#3b82f6"
+                  <CiSquareCheck size={45} color="blue" className='flex-shrink-0'
                     />
 
-                  <span className="text-lg text-gray-800">{item}</span>
+                  <h3 className="text-lg font-semibold text-gray-800">{item}</h3>
                 </div>
               ))}
             </div>

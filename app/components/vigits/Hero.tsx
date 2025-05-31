@@ -1,42 +1,42 @@
 import React from 'react'
 import Wrapper from '../../components/shared/Wrapper';
 import Image from 'next/image';
+import Button from "../../components/shared/Button";
 export default function Hero() {
     return (
         <section>
             <Wrapper>
-                <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
-
+                <div className="flex flex-col md:flex-row items-center">
                     {/* Left Side: Text */}
-                    <div className="md:w-1/2 mb-10 md:mb-0">
-                        <p className="text-teal-700 font-semibold text-lg mt-4">  Panaverse DAO aik mission-driven community hai jo web3, AI.
-                        </p>
-                        <h1 className="text-5xl font-bold text-gray-800 mb-4">
+                    <div className="flex-1 ">
+                        <h4 className="text-teal-800 font-semibold text-lg mt-4"> Presidential Initiative for Artificial Intelligence and Computing (PIAIC)
+                        </h4>
+                        <h1 className="text-4xl sm:text-5xl font-semibold ">
                             Certified Web 3.0 And Metaverse Developer
                         </h1>
-                        <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                            Panaverse DAO aik mission-driven community hai jo web3, AI, aur metaverse technologies par focus karti hai.
-                            Yahan aapko latest tools aur frameworks seekhne ko milte hain.
-                            Yeh program students ko modern tech stack sikhata hai jo real-world projects pe based hota hai.
-                            Har course carefully design kiya gaya hai to make you job-ready.
-                            Future tech mein expert banne ke liye Panaverse se behtar koi jagah nahi.
+                        <p className="mt-5 text-xl text-slate-600">
+                           A One and Quarter Years Panaverse DAO Earn as you Learn Program<br/> Getting
+                            Ready for the Next Generation of the Internet.
+                        </p>
+                        <p className="mt-2 text-lg text-slate-600">
+                           Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), 
+                           Cloud, Edge, Computing/IoT, Network Automation, and Bioinformatics Technologies
+
+
                         </p>
 
-
-                        <a className="inline-block bg-teal-600 text-white px-6 py-2 rounded-xl hover:bg-teal-700 transition">
-                            Learn More
-                        </a>
-
-
+                         <div className='mt-4'>
+                        <Button text={"Enroll now"} />
+                        </div>
                     </div>
                     {/* Right Side: Image */}
-                    <div className="md:w-1/2 flex justify-center">
+                    <div >
                         <Image
-                            src="/hero.jpeg" // ✅ Put your image in public/hero.png
+                            src="/hero.png" // ✅ Put your image in public/hero.png
                             alt="Hero Illustration"
-                            width={300}
-                            height={100}
-                            className="rounded-lg shadow-lg"
+                            width={450}
+                            height={500}
+                            className="rounded-lg shadow-lg "
                             priority
                         />
                     </div>
@@ -45,3 +45,4 @@ export default function Hero() {
         </section>
     )
 }
+
